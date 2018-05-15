@@ -1,6 +1,8 @@
 import sys
 import os
-os.chdir('/'.join(sys.argv[0].split('\\')[:-1]))
+changepath='/'.join(sys.argv[0].split('\\')[:-1])
+if changepath:
+    os.chdir(changepath)
 try:
     import requests
 except:
